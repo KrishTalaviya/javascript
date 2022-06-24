@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script >
+		n=prompt("enter no");
+		for( i=0; i<=n;i++)
+		{
+		 fibo=fib(i);
+		   function fib(n){
+			if(n>=0){
+				if(n==0){
+					return 0;
+				}
+				if(n==1){
+					return 1;
+				}
+				else{
+					sum=fib(n-1)+fib(n-2);
+					return sum;
+				}
+			}
+		}
+		document.write(""+fibo);
+	}
+
+
+		
+	</script>
+
+</body>
+</html>

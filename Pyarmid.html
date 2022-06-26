@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script>
+        n=prompt("enter number");
+        let str=" ";
+        for(i=1;i<=n;i++) {
+            for(j=1;j<=n-i;j++) {
+                 document.write("&nbsp") ;
+                }
+              for(k=1;k<=2*i-1;k++){
+                  document.write("*");        
+              }
+            document.write("</br>"); 
+        }
+        
+    </script>
+</body>
+</html>

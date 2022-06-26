@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script>
+        a=prompt("enter number");
+        len=a.length
+        b=parseInt(a); 
+        sum=0;
+        temp=b;
+        while(b>0){
+           n=b%10;
+           sum+=Math.pow(n,len);
+           b=parseInt(b/10); 
+        }
+        if(temp==sum){
+        document.write("Number is armstrong"); 
+        }
+        else{
+         document.write("Number is not armstrong");
+        }
+    </script>
+</body>
+</html>

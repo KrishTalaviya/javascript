@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script>
+        a=prompt("enter number 1");
+        b=prompt("enter number 2") ;
+        
+        for(i=a+1;i<b;i++) 
+        {
+         for(j=2;j<i;j++)
+         {
+          flag=0;
+          if(i%j==0) {
+            flag=1;
+            break;
+          }
+         
+         }
+         if(flag!=1) {
+            document.write(i); 
+         }
+            
+                  
+        }

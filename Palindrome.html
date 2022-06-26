@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script>
+        n=prompt("enter number");
+        temp=n;
+        sum=0;
+        while(n>0){
+           a=n%10;
+           sum=sum*10+a;
+           n=parseInt(n/10); 
+        }
+        if(temp==sum){
+        document.write("Number is palindrome"); 
+        }
+        else{
+         document.write("Numberis notpalindrome");
+         }
+    </script>
+</body>
+</html>

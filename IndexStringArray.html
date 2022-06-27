@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		str=prompt("enter senetnce");
+		word=prompt("enter word");
+		const myarray=str.split(" ");
+		i=0;
+		for(i=0;i<myarray.length;i++){
+			if(myarray[i].localeCompare(word)==0){
+				document.write(i);
+
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>

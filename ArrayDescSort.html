@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        size=prompt("enter size of array");
+        
+        for(i=0;i<size;i++){
+           arr[i]=prompt("enter"+(i+1)+"element");
+        }
+        temp=arr[size];
+        for(i=size-1;i>=0;i--){
+           for(j=i-1;j>=0;j--){
+              temp=arr[i];
+              arr[i]=arr[j];
+              arr[j]=temp;
+           }
+           
+        }
+        for(i=0;i<size;i++){
+           document.write(arr[i]);
+           document.write("</br>");
+        }
+        
+        
+    </script>
+</body>
+</html>

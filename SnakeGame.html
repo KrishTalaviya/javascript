@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snake Game</title>
+	<style>
+	#snakeImg{
+		width:100px;
+		position:absolute;
+		left:800px;
+		top:300px;
+	}
+	#snakeFood{
+		width:30px;
+		position:absolute;
+	}
+</style>
+</head>
+<body onload="snakeEat()">
+
+	<input type="button" id="" onclick="startGoingUp()" value="Up"></br>
+	<input type="button" id="" onclick="startGoingLeft()" value="Left">
+	<input type="button" id="" onclick="startGoingDown()" value="Down"></br>
+	<input type="button" id="" onclick="startGoingRight()" value="Right">
+	<img src="snake.jpg" id="snakeImg">
+	<img src="snakefood.jpg" id="snakeFood">
+	<h1 id="life">3</h1>
+	<script type="text/javascript">
+		x=800;
+		y=426;
+		var clearLeft;
+		var clearRight;
+		var clearUp;
+		var clearDown;
+		var lifeleft=3;
+		var sx;
+		var sy;
+		
+		
+		function startGoingLeft() {
+			
+         clearLeft=setInterval(goLeft,10);
+         clearInterval(clearRight);
+         clearInterval(clearDown);
+         clearInterval(clearUp);
+	         }
+
+		function goLeft(){
+			if(x<0){
+				reset();
+			}
+			
+			var d=document.getElementById("snakeImg");
+			d.style.left=(x--)+"px";
+
+		}
+		function startGoingRight() {
+         clearRight=setInterval(goRight,10);
+         clearInterval(clearLeft);
+         clearInterval(clearDown);
+         clearInterval(clearUp);
+         
+		}
+		function goRight(){
+			if(x<800){
+				reset();
+			}
+			
+			var d=document.getElementById("snakeImg");
+			d.style.left=(x++)+"px";
+
+		}
+		function startGoingUp() {
+         clearUp=setInterval(goUp,10);
+         clearInterval(clearLeft);
+         clearInterval(clearRight);
+         clearInterval(clearDown);
+     }
+         
+		function goUp(){
+			if(y<0){
+				reset();
+			}
+			
+			var d=document.getElementById("snakeImg");
+			d.style.top=(y--)+"px";
+
+		}
+		function startGoingDown() {
+         clearDown=setInterval(goDown,10);
+         clearInterval(clearLeft);
+         clearInterval(clearRight);
+         clearInterval(clearUp);
+         }
+		function goDown(){
+			if(y>1500){
+				reset();
+			}
+			
+			var d=document.getElementById("snakeImg");
+			d.style.top=(y++)+"px";
+
+		}
+		function reset(){
+			lifeleft--;
+			e=document.getElementById("life");
+			
+			e.innerHTML=lifeleft;
+			if(lifeleft<=0){
+				document.write("gameOver");
+            }
+            x=800;
+            y=426;
+
+		}
+		function snakeEat(){
+			c=document.getElementById("snakeFood");
+			c.style.left=(Math.random()*1500+"px");
+			c.style.top=(Math.random()*426+"px");
+			sx=c.style.left;
+			sy=c.style.top;
+
+		}
+		function FoodEaten(){
+			if(x-)
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array methods</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const myArray=["krish","talviya","Darshan","university"]
+		 myArray2=["Dcp","Gondal"]
+		//Property 1-Length of array//
+		let a=myArray.length;
+		console.log("Array length="+a);
+		//property-2 constructor return that array prototype is created//
+		let b=myArray.constructor;
+		console.log("Array constructor="+b);
+		//method-1 concat() for concating two array//
+		const myArray3=myArray.concat(myArray2);
+		console.log(myArray3);
+		//method-2 coyWithin() that copys array element to other with overwriting//
+		//copyWithin(target,start,end)//
+		//target--from where first element will be copied in output array//
+		//start--strating index of element of input array for copying//
+		//end--ending index of element of input array for copying//
+		myArray2=myArray.copyWithin(1,2,3);
+		console.log(myArray2);
+		//method-3 entries return value with index//
+		let c=myArray.entries();
+		console.log(c);
+		for (let x of c) {
+           console.log(x);
+        }
+        
+
+	</script>
+
+</body>
+</html>
